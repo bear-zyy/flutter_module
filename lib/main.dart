@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(flutterView());
+
+Widget flutterView(){
+  return Container(
+    width: 375,
+    height: 667,
+    color: Colors.red,
+  );
+}
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
