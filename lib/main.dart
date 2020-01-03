@@ -9,9 +9,16 @@ Widget flutterView(){
     color: Colors.red,
     child: Center(
       child: Container(
-        width: 100,
-        height: 100,
+        width: 200,
+        height: 200,
         color: Colors.white,
+        child: Center(
+          child: Container(
+            height: 100,
+            width: 100,
+            color: Colors.yellow,
+          ),
+        ),
       ),
     ),
 
