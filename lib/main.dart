@@ -7,6 +7,14 @@ Widget flutterView(){
     width: 375,
     height: 667,
     color: Colors.red,
+    child: Center(
+      child: Container(
+        width: 100,
+        height: 100,
+        color: Colors.white,
+      ),
+    ),
+
   );
 }
 
@@ -42,8 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       width: 375,
       height: 667,
-      
-      color: Colors.red,
+
+      color: Colors.blue,
 
     );
   }
