@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(flutterView());
+void main() => runApp(MyApp());
 
 Widget flutterView(){
   return Container(
@@ -57,8 +57,26 @@ class _MyHomePageState extends State<MyHomePage> {
     return Container(
       width: 375,
       height: 667,
-
-      color: Colors.blue,
+      color: Colors.red,
+      child: Center(
+        child: Container(
+          width: 200,
+          height: 200,
+          color: Colors.white,
+          child: Center(
+            child: Container(
+              height: 100,
+              width: 100,
+              color: Colors.yellow,
+              child: Center(
+                child: Text("aaa" ,
+                  style: TextStyle(color: Colors.white , fontWeight: FontWeight.w500 , fontSize: 20 ,
+                      decoration: TextDecoration.none),),
+              ),
+            ),
+          ),
+        ),
+      ),
 
     );
   }
