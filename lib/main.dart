@@ -59,25 +59,53 @@ class _MyHomePageState extends State<MyHomePage> {
       height: 667,
       color: Colors.red,
       child: Center(
-        child: Container(
-          width: 200,
-          height: 200,
-          color: Colors.white,
-          child: Center(
-            child: Container(
-              height: 100,
-              width: 100,
-              color: Colors.yellow,
-              child: Center(
-                child: Text("aaa" ,
-                  style: TextStyle(color: Colors.white , fontWeight: FontWeight.w500 , fontSize: 20 ,
-                      decoration: TextDecoration.none),),
-              ),
-            ),
-          ),
+        child: Column(
+          children: <Widget>[
+            aaa(),
+            bbb(),
+          ],
         ),
       ),
-
     );
   }
+}
+
+Widget aaa(){
+  return Container(
+    width: 200,
+    height: 200,
+    color: Colors.white,
+    child: Center(
+      child: Container(
+        height: 100,
+        width: 100,
+        color: Colors.yellow,
+        child: Center(
+          child: Text("aaa" ,
+            style: TextStyle(color: Colors.white , fontWeight: FontWeight.w500 , fontSize: 20 ,
+                decoration: TextDecoration.none),),
+        ),
+      ),
+    ),
+  );
+}
+
+Widget bbb(){
+  return Container(
+    width: 200,
+    height: 200,
+    color: Colors.yellow,
+    child: Center(
+      child: Container(
+        height: 100,
+        width: 100,
+        color: Colors.white,
+        child: Center(
+          child: Text("bbb" ,
+            style: TextStyle(color: Colors.black , fontWeight: FontWeight.w500 , fontSize: 20 ,
+                decoration: TextDecoration.none),),
+        ),
+      ),
+    ),
+  );
 }
