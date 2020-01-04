@@ -85,7 +85,23 @@ class _secondWidgetState extends State<secondWidget>{
               ),
             ),
           ),
-          Container(width: 100 , height: 100, color: Colors.white,),
+          GestureDetector(
+            onTap: ()=>resultInvoke(),
+            child: Padding(
+              padding: EdgeInsets.only(top: 20 , bottom: 0),
+              child: Container(
+                width: 100,
+                height: 100,
+                color: Colors.black,
+                child: Center(
+                  child: Text("resultInvoke" ,
+                    style: TextStyle(color: Colors.red , fontSize: 15 , fontWeight: FontWeight.w400 , decoration: TextDecoration.none),
+                    textDirection: TextDirection.ltr,),
+                ),
+              ),
+            ),
+          ),
+
           Container(width: 100 , height: 100, color: Colors.white,),
         ],
       ),
@@ -103,6 +119,11 @@ class _secondWidgetState extends State<secondWidget>{
   invokeMap(){
     Map<String,dynamic> value = {"key":"1" , "data":"2"};
     methodChannel.invokeMapMethod("secondChannelZyy_invokeMap",value);
+  }
+
+  resultInvoke() async{
+    var result = await methodChannel.invokeMethod("secondChannelZyy_resultInvoke");
+    print('result = ' +result);
   }
 
 }
