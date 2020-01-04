@@ -8,15 +8,17 @@ void main() => runApp(MyApp(window.defaultRouteName));
 Widget MyApp(String route){
   switch (route){
     case 'firstWidget':
-      return MyHomePage(title: "firstWidget",);
+      return firstWidget();
+//      return MyHomePage(title: "firstWidget",);
     case 'secondWidget' :
       return secondWidget();
     default:
-      return Container(
-        width: 375,
-        height: 667,
-        color: Colors.orange,
-      );
+      return firstWidget();
+//      return Container(
+//        width: 375,
+//        height: 667,
+//        color: Colors.orange,
+//      );
   }
 }
 
@@ -64,6 +66,22 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
+Widget firstWidget(){
+  return Container(
+    width: 375,
+    height: double.infinity,
+    color: Colors.red,
+    child: Center(
+      child: Column(
+        children: <Widget>[
+          aaa(),
+          bbb(),
+        ],
+      ),
+    ),
+  );
+}
+
 Widget aaa(){
   return Container(
     width: 200,
@@ -74,11 +92,11 @@ Widget aaa(){
         height: 100,
         width: 100,
         color: Colors.yellow,
-        child: Center(
-          child: Text("aaa" ,
-            style: TextStyle(color: Colors.white , fontWeight: FontWeight.w500 , fontSize: 20 ,
-                decoration: TextDecoration.none),),
-        ),
+//        child: Center(
+//          child: Text("aaa" ,
+//            style: TextStyle(color: Colors.white , fontWeight: FontWeight.w500 , fontSize: 20 ,
+//                decoration: TextDecoration.none),),
+//        ),
       ),
     ),
   );
@@ -94,11 +112,11 @@ Widget bbb(){
         height: 100,
         width: 100,
         color: Colors.white,
-        child: Center(
-          child: Text("bbb" ,
-            style: TextStyle(color: Colors.black , fontWeight: FontWeight.w500 , fontSize: 20 ,
-                decoration: TextDecoration.none),),
-        ),
+//        child: Center(
+//          child: Text("bbb" ,
+//            style: TextStyle(color: Colors.black , fontWeight: FontWeight.w500 , fontSize: 20 ,
+//                decoration: TextDecoration.none),),
+//        ),
       ),
     ),
   );
